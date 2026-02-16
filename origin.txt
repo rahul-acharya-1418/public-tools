@@ -1,0 +1,11 @@
+ffuf -u https://FFUF/Portal -H "Host: hedgesuite.fisglobal.com" -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" -c -w list-of-ip.txt | tee find-original-ip.txt
+
+
+147.249.242.167
+147.249.55.203
+147.249.133.112
+147.249.242.60
+
+echo paypal | asnmap -silent | mapcidr -silent > ip.txt
+echo PAYPAL | asnmap | dnsx -ptr > dnsx.txt
+
